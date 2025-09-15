@@ -13,21 +13,47 @@ body {
 main {
 
     background-color: antiquewhite;
-    width: 70ex;
+    width: 60ex;
     margin: 0 auto;
     padding: 4ex 4ex 4ex 4ex;
 }
 
+toptitle {
+    display: block;
+    font-style: italic;
+    text-align: center;
+    /* margin-bottom: 2em; */
+}
+toptitle b {
+    padding: 0 2ex; /* replace by  */
+
+    /* text-align: center; */
+    /* margin-bottom: 2em; */
+}
+ 
 p {
     text-indent: 4ex;
 }
-h1 { text-align: center; }
-h2 { text-align: center; }
+h1 { 
+  
+    text-align: center;
+    font-size: 1em;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h2 {
+    font-size: 1.5em;
+    text-align: center;
+    margin: 0;
+    padding: .5em 0;
+}
 
 h4 {
     display: block;
     font-size: 70%;
 }
+
+
 
 author {
     font-weight: bolder;

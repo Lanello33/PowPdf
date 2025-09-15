@@ -2,7 +2,7 @@
 
    function init() {
         //document.addEventListener("DOMContentLoaded", function () {
-        replaceHead();
+        //replaceHead();
         FNs();
         footnotes();
         powLinks();
