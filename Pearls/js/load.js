@@ -6,6 +6,7 @@
         replaceN();
         replaceFootnote();
         powLinks();
+        replaceCopyright()
     };
 
     function replaceHead() {
@@ -20,7 +21,15 @@
         document.querySelectorAll("Aml").forEach(aml => {
             const i = aml.getAttribute("i");
             const N = `<N><a id=n${i} href="#a${i}">[${i}]</a></N>`;
-            aml.outerHTML = `<Aml><a href="https://ascendedmasterlibrary.org/}">Ascended Master Library</a></Aml>`;
+            aml.outerHTML = `<Aml><a href="https://ascendedmasterlibrary.org/" target="_blank">Ascended Master Library</a></Aml>`;
+        });
+    }
+
+    function replaceFootnote() {
+        document.querySelectorAll("Footnote").forEach(footnote => {
+            const i = footnote.getAttribute("i");
+            const c = footnote.innerHTML;
+            footnote.outerHTML = `<Footnote><a id="a${i}" href="#n${i}">${i}.</a> ${c}</Footnote>`;
         });
     }
 
@@ -32,7 +41,7 @@
         });
     }
 
-    function replaceFootnote() {
+    function XreplaceFootnote() {
         document.querySelectorAll("Footnote").forEach(footnote => {
             const i = footnote.getAttribute("i");
             const contents = footnote.innerHTML;
@@ -90,7 +99,7 @@
             const no = link.getAttribute("no");
             const contents = link.innerHTML;
             const href = getPowLink(vol, no);
-            link.outerHTML = `<a href="${href}">Vol. ${vol} No. ${no}  ${contents}</a>`;
+            link.outerHTML = `<a href="${href}" target="_blank">Vol. ${vol} No. ${no}  ${contents}</a>`;
         });
     }
 
@@ -101,7 +110,6 @@
         //const name = `pw${year}{}`;
         //const href = `https://pearls.tsl.org/${year}pows/${name}.html`;
     }
-
 
     function GetheadContent() {
 // <link rel="stylesheet" href="../pearls.css" type="text/css" media="screen" />
@@ -121,4 +129,25 @@
 <script type="text/javascript" src="../highlight.js"></script>
 `
 .replace("#script", "script");
+    }
+
+    function getCopyright() {
+        return `
+<hr>
+<p class="copyright"><a href="../legal_notices/copyright.html?pearls" target="_blank">Terms of Use</a></p>
+<p class="copyright">Copyright © 2021 The Summit Lighthouse, Inc. All rights reserved.</p>
+<p class="copyright"><em>Pearls  of Wisdom</em><sup>&reg;</sup>
+    , the <em>Pearls of Wisdom</em><sup>&reg;</sup> masthead,
+    Keepers of the Flame<sup>&reg;</sup>,
+    The Summit Lighthouse<sup>&reg;</sup> and The Summit  Lighthouse<sup>®;</sup>
+    logo are trademarks registered in the United States Patent and Trademark Office
+    and in other countries. All rights to their use are reserved.
+</p>`
+    }
+
+    function replaceCopyright() {
+
+        let cr = document.querySelector("Copyright");
+        let c = getCopyright();
+        cr.outerHTML = c;
     }
