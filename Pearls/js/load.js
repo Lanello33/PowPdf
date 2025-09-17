@@ -1,10 +1,10 @@
-   init();
-
-   function init() {
-        //document.addEventListener("DOMContentLoaded", function () {
+   document.addEventListener("DOMContentLoaded", load);
+  
+   function load() {
         //replaceHead();
-        FNs();
-        footnotes();
+        replaceAml();
+        replaceN();
+        replaceFootnote();
         powLinks();
     };
 
@@ -14,6 +14,30 @@
         clearAllAttributes(head);
         head.innerHTML = GetheadContent();
         UpdateMeta(head, metaMap);
+    }
+
+   function replaceAml() {
+        document.querySelectorAll("Aml").forEach(aml => {
+            const i = aml.getAttribute("i");
+            const N = `<N><a id=n${i} href="#a${i}">[${i}]</a></N>`;
+            aml.outerHTML = `<Aml><a href="https://ascendedmasterlibrary.org/}">Ascended Master Library</a></Aml>`;
+        });
+    }
+
+    function replaceN() {
+        document.querySelectorAll("N").forEach(n => {
+            const i = n.getAttribute("i");
+            const N = `<N><a id=n${i} href="#a${i}">[${i}]</a></N>`;
+            n.outerHTML = N;
+        });
+    }
+
+    function replaceFootnote() {
+        document.querySelectorAll("Footnote").forEach(footnote => {
+            const i = footnote.getAttribute("i");
+            const contents = footnote.innerHTML;
+            footnote.outerHTML = `<Footnote><a id="a${i}" href="#n${i}" class="footnote">${i}.</a> ${contents}</N>`;
+        });
     }
 
     function getMapFromHeadAttrs() {
@@ -28,11 +52,9 @@
     }
 
     function clearAllAttributes(tag) {
-        // Remove all child nodes
         while (tag.firstChild) {
             tag.removeChild(tag.firstChild);
         }
-        // Remove all attributes
         const attrs = Array.from(tag.attributes);
         for (const attr of attrs) {
             tag.removeAttribute(attr.name);
@@ -59,22 +81,6 @@
             }
         });
         return head.outerHTML;
-    }
-
-    function FNs() {
-        document.querySelectorAll("fn").forEach(fn => {
-            const n = fn.getAttribute("n");
-            const a = `<b><a id=fn${n} href="#footnote${n}"><b>[[[${n}]]]<b></a></b>`;
-            fn.outerHTML = a;
-        });
-    }
-
-    function footnotes() {
-        document.querySelectorAll("footnote").forEach(footnote => {
-            const n = footnote.getAttribute("n");
-            const contents = footnote.innerHTML;
-            footnote.outerHTML = `<a id="footnote${n}" href="#fn${n}">${n}</a> ${contents}`;
-        });
     }
 
     function powLinks() {
