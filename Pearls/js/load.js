@@ -6,6 +6,7 @@
         replaceN();
         replaceFootnote();
         powLinks();
+        kof();
         replaceCopyright()
     };
 
@@ -90,6 +91,12 @@
             }
         });
         return head.outerHTML;
+    }
+
+    function kof() {
+    document.querySelectorAll("Kof").forEach(link => {
+        link.outerHTML = `<Kof><a href="https://KeepersOfTheFlame.org" target="_blank">Keepers of the Flame.</a></Kof>`;
+        });
     }
 
     function powLinks() {

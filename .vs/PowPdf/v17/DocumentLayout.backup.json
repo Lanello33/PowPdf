@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\dev\\PowPdf\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\dev\\PowPdf\\Pearls\\js\\load.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pearls\\js\\load.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\dev\\PowPdf\\Pearls\\css\\pearls.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pearls\\css\\pearls.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\dev\\PowPdf\\Pearls\\pages\\Pow2025-08-01.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pearls\\pages\\Pow2025-08-01.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
@@ -35,12 +43,38 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "load.js",
+              "DocumentMoniker": "C:\\dev\\PowPdf\\Pearls\\js\\load.js",
+              "RelativeDocumentMoniker": "Pearls\\js\\load.js",
+              "ToolTip": "C:\\dev\\PowPdf\\Pearls\\js\\load.js",
+              "RelativeToolTip": "Pearls\\js\\load.js",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAAwGEAAAB2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-09-19T04:30:16.954Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "pearls.css",
+              "DocumentMoniker": "C:\\dev\\PowPdf\\Pearls\\css\\pearls.css",
+              "RelativeDocumentMoniker": "Pearls\\css\\pearls.css",
+              "ToolTip": "C:\\dev\\PowPdf\\Pearls\\css\\pearls.css",
+              "RelativeToolTip": "Pearls\\css\\pearls.css",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-09-18T22:29:39.187Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Pow2025-08-01.html",
               "DocumentMoniker": "C:\\dev\\PowPdf\\Pearls\\pages\\Pow2025-08-01.html",
               "RelativeDocumentMoniker": "Pearls\\pages\\Pow2025-08-01.html",
               "ToolTip": "C:\\dev\\PowPdf\\Pearls\\pages\\Pow2025-08-01.html",
               "RelativeToolTip": "Pearls\\pages\\Pow2025-08-01.html",
-              "ViewState": "AgIAADgAAAAAAAAAAAAUwDcAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAAAICAAAAAAAAAAAUwAoCAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2025-09-18T01:21:41.065Z",
               "EditorCaption": ""

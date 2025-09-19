@@ -9,7 +9,7 @@ html {
 body {
     background-color: white;
     font-family: Helvetica, Arial, san-serif;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.6;
     color: #333;
     margin: 0;
@@ -23,6 +23,10 @@ Aml {
 
 Author {
    font-weight: bold;
+}
+
+author {
+    font-weight: bolder;
 }
 
 .centered {
@@ -47,6 +51,13 @@ Footnote {
     display: block;
     margin-top: 1em;
     font-size: .85em;
+}
+
+
+footnotes {
+    display: block;
+    margin-top: 2em;
+    font-family: sans-serif;
 }
 
 footer {
@@ -78,8 +89,11 @@ h4 {
     /* font-size: 90%; */
     font-family: Helvetica;
 }
-main {
 
+Kof {
+}
+
+main {
     background-color: antiquewhite;
     width: 60ex;
     margin: 0 auto;
@@ -95,28 +109,23 @@ p {
 }
 
 toptitle {
-    display: block;
+    font-family: 'Times New Roman', Times, serif;
     font-style: italic;
-    text-align: center;
-    /* margin-bottom: 2em; */
+    display: flex; /* Establishes the flex container */
+    justify-content: space-between; /* Distributes items with space between them */
+    align-items: center; /* Vertically centers the items */
+    width: 100%; /* Ensures container spans full width */
+    /*border: 1px solid #ccc;*/ /* For demonstration */
+    padding: 10px;
 }
-toptitle b {
-    padding: 0 2ex; /* replace by  */
-
-    /* text-align: center; */
-    /* margin-bottom: 2em; */
-}
-
-
-
-
-
-author {
-    font-weight: bolder;
+toptitle: span:nth-child(2) {
+  /* Selects the middle span for additional styling */
+  text-align: center;
+  /* Flexbox's space-between will handle the horizontal centering */
 }
 
-footnotes {
-    display: block;
-    margin-top: 2em;
-    font-family: sans-serif;
-}
+    toptitle b {
+        padding: 0 2ex; /* replace by  */
+        /* text-align: center; */
+        /* margin-bottom: 2em; */
+    }

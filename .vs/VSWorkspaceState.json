@@ -2,9 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\Pearls",
+    "\\Pearls\\css",
+    "\\Pearls\\js",
     "\\Pearls\\pages",
     "\\Pearls\\Pdf"
   ],
-  "SelectedNode": "\\Pearls\\Pdf\\2025-08-01-ePearl.pdf",
+  "SelectedNode": "\\Pearls\\css\\pearls.css",
   "PreviewInSolutionExplorer": false
 }
